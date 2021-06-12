@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA079C562674C32200D952E4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA079C552674C32200D952E4 /* SettingsViewController.swift */; };
+		FA079C592674C34300D952E4 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA079C582674C34300D952E4 /* SettingsSection.swift */; };
+		FA079C5D2674C38600D952E4 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA079C5C2674C38600D952E4 /* SettingsCell.swift */; };
 		FA83A749264BE3A8007D8EEF /* PointEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83A748264BE3A8007D8EEF /* PointEntry.swift */; };
 		FA83A74C264BF7D9007D8EEF /* PointEntryExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83A74B264BF7D9007D8EEF /* PointEntryExt.swift */; };
 		FA83A74F264BF9D7007D8EEF /* CurveAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83A74E264BF9D7007D8EEF /* CurveAlgorithm.swift */; };
@@ -48,6 +51,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA079C552674C32200D952E4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FA079C582674C34300D952E4 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		FA079C5C2674C38600D952E4 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		FA83A748264BE3A8007D8EEF /* PointEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointEntry.swift; sourceTree = "<group>"; };
 		FA83A74B264BF7D9007D8EEF /* PointEntryExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointEntryExt.swift; sourceTree = "<group>"; };
 		FA83A74E264BF9D7007D8EEF /* CurveAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveAlgorithm.swift; sourceTree = "<group>"; };
@@ -101,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA079C5B2674C36200D952E4 /* SettingsCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA079C5C2674C38600D952E4 /* SettingsCell.swift */,
+			);
+			path = SettingsCells;
+			sourceTree = "<group>";
+		};
 		FA91B0102646BE22003AA1C7 /* Chart */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +168,7 @@
 				FAABFBF826431C2400AD3D0C /* WeatherScreenCVDelegateController.swift */,
 				FAC49EE22652CA1A00A8F5C0 /* LocationViewController.swift */,
 				FAED4DAA2652E079003A33B6 /* LocationResultsTableController.swift */,
+				FA079C552674C32200D952E4 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC49EE52652CA8E00A8F5C0 /* LocationCells */,
+				FA079C5B2674C36200D952E4 /* SettingsCells */,
 				FA91B0102646BE22003AA1C7 /* Chart */,
 				FAABFBEF2642AFE400AD3D0C /* WeatherScreenCells */,
 			);
@@ -177,6 +193,7 @@
 				FAABFBE52641776000AD3D0C /* LocationManager.swift */,
 				FAABFBE82641779600AD3D0C /* Location.swift */,
 				FA83A766264D76BD007D8EEF /* Units.swift */,
+				FA079C582674C34300D952E4 /* SettingsSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,12 +355,14 @@
 				FAABFB9926411E6400AD3D0C /* AppDelegate.swift in Sources */,
 				FAABFBCD2641551000AD3D0C /* ExcludePart.swift in Sources */,
 				FAABFB9B26411E6400AD3D0C /* SceneDelegate.swift in Sources */,
+				FA079C592674C34300D952E4 /* SettingsSection.swift in Sources */,
 				FA83A75D264D20C0007D8EEF /* WeatherViewModel.swift in Sources */,
 				FAABFBC02641522300AD3D0C /* WeatherModel.swift in Sources */,
 				FAABFBE92641779600AD3D0C /* Location.swift in Sources */,
 				FA83A752264C0974007D8EEF /* UIImageExt.swift in Sources */,
 				FA83A762264D3CA1007D8EEF /* IntExt.swift in Sources */,
 				FAABFBFE264320BD00AD3D0C /* WeatherHeaderCell.swift in Sources */,
+				FA079C5D2674C38600D952E4 /* SettingsCell.swift in Sources */,
 				FAABFBF12642B01600AD3D0C /* WeatherScreenCVCell.swift in Sources */,
 				FAABFBCA2641546700AD3D0C /* ForecastProvider.swift in Sources */,
 				FAABFBE32641701000AD3D0C /* URLSessionMockProvider.swift in Sources */,
@@ -353,6 +372,7 @@
 				FAABFBC4264152CA00AD3D0C /* ServiceProtocol.swift in Sources */,
 				FAC49EE72652CAC000A8F5C0 /* LocationTableViewCell.swift in Sources */,
 				FAABFBE026416F2900AD3D0C /* NetworkResponse.swift in Sources */,
+				FA079C562674C32200D952E4 /* SettingsViewController.swift in Sources */,
 				FA83A76A264D79A3007D8EEF /* DoubleExt.swift in Sources */,
 				FAABFBEC26428F0300AD3D0C /* ProviderProtocol.swift in Sources */,
 				FAABFBF62642B6C200AD3D0C /* UIViewExt.swift in Sources */,

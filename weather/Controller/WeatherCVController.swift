@@ -18,6 +18,7 @@ class WeatherCVController: UICollectionViewController, UICollectionViewDelegateF
     private var weatherScreenCVDelegateControllers: [WeatherScreenCVDelegateController]
     
     let locationVC: LocationViewController?
+    let settingsVC: SettingsViewController?
 
     let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
@@ -36,7 +37,8 @@ class WeatherCVController: UICollectionViewController, UICollectionViewDelegateF
         }
 
         self.locationVC = LocationViewController(locationManager: locationManager)
-        
+        self.settingsVC = SettingsViewController()
+
         super.init(collectionViewLayout: layout)
         
         //fetchWeather()
@@ -92,7 +94,7 @@ class WeatherCVController: UICollectionViewController, UICollectionViewDelegateF
         view.addSubview(pageControl, anchors: [ .centerX(view.centerXAnchor), .bottom(view.bottomAnchor, -20) ])
         
         let manageLocationButton = UIBarButtonItem(image: UIImage(systemName: "plus.magnifyingglass"), style: .done, target: self, action: #selector(handleAddLocationButton))
-        let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .done, target: self, action: nil)
+        let settingsButton = UIBarButtonItem(image: UIImage(systemName: "gearshape"), style: .done, target: self, action: #selector(handleSettingsButton))
         
         manageLocationButton.tintColor = UIColor.black
         settingsButton.tintColor = UIColor.black
@@ -128,6 +130,12 @@ class WeatherCVController: UICollectionViewController, UICollectionViewDelegateF
 //        let locationVC = LocationViewController(locationManager: locationManager)
         guard let locationVC = locationVC else { return }
         let navController = UINavigationController(rootViewController: locationVC)
+        self.present(navController, animated: true, completion: nil)
+    }
+    
+    @objc func handleSettingsButton() {
+        guard let settingsVC = settingsVC else { return }
+        let navController = UINavigationController(rootViewController: settingsVC)
         self.present(navController, animated: true, completion: nil)
     }
     
