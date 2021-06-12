@@ -69,9 +69,16 @@ class LocationViewController: UIViewController {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         definesPresentationContext = true
         
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationItem.largeTitleDisplayMode = .always
     }
   
     func setupViews() {
