@@ -13,6 +13,17 @@ class SettingsViewController: UIViewController {
     
     var tableView: UITableView!
     
+    let privacyVC: TextViewController?
+    
+    init() {
+        privacyVC = TextViewController(fileName: "privacyandterms")
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -88,7 +99,6 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case .Appearance:
             let appearance = AppearanceOptions(rawValue: indexPath.row)
-//            cell.textLabel?.text = appearance?.description
             cell.sectionType = appearance
         case .Other:
             let other = OtherOptions(rawValue: indexPath.row)
@@ -101,12 +111,20 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let section = SettingsSection(rawValue: indexPath.section) else { return }
         
-//        switch section {
+        switch section {
 //        case .Appearance:
-//            //print let appearance = AppearanceOptions(rawValue: indexPath.row)
-//        case .Other:
-//            //print let other = OtherOptions(rawValue: indexPath.row)
-//        }
+            //print let appearance = AppearanceOptions(rawValue: indexPath.row)
+        case .Other:
+            let other = OtherOptions(rawValue: indexPath.row)
+            if other == OtherOptions.privacy {
+                guard let privacyVC = privacyVC else { return }
+//                let navController = UINavigationController(rootViewController: privacyVC)
+//                self.present(navController, animated: true, completion: nil)
+                self.navigationController?.pushViewController(privacyVC, animated: true)
+            }
+        default:
+            break
+        }
         
     }
 }

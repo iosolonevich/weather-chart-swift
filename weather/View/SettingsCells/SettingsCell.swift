@@ -34,8 +34,12 @@ class SettingsCell: UITableViewCell {
         return switchControl
     }()
     
-    @objc func handleSwitchAction() {
-        
+    @objc func handleSwitchAction(sender: UISwitch) {
+        if sender.isOn {
+            print("turned on")
+        } else {
+            print("turned off")
+        }
     }
 
 }

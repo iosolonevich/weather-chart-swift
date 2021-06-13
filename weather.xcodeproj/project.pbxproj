@@ -10,6 +10,8 @@
 		FA079C562674C32200D952E4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA079C552674C32200D952E4 /* SettingsViewController.swift */; };
 		FA079C592674C34300D952E4 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA079C582674C34300D952E4 /* SettingsSection.swift */; };
 		FA079C5D2674C38600D952E4 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA079C5C2674C38600D952E4 /* SettingsCell.swift */; };
+		FA079C61267666CD00D952E4 /* privacyandterms.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA079C60267666CD00D952E4 /* privacyandterms.rtf */; };
+		FA079C642676681200D952E4 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA079C632676681200D952E4 /* TextViewController.swift */; };
 		FA83A749264BE3A8007D8EEF /* PointEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83A748264BE3A8007D8EEF /* PointEntry.swift */; };
 		FA83A74C264BF7D9007D8EEF /* PointEntryExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83A74B264BF7D9007D8EEF /* PointEntryExt.swift */; };
 		FA83A74F264BF9D7007D8EEF /* CurveAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA83A74E264BF9D7007D8EEF /* CurveAlgorithm.swift */; };
@@ -54,6 +56,8 @@
 		FA079C552674C32200D952E4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FA079C582674C34300D952E4 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
 		FA079C5C2674C38600D952E4 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		FA079C60267666CD00D952E4 /* privacyandterms.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = privacyandterms.rtf; sourceTree = "<group>"; };
+		FA079C632676681200D952E4 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		FA83A748264BE3A8007D8EEF /* PointEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointEntry.swift; sourceTree = "<group>"; };
 		FA83A74B264BF7D9007D8EEF /* PointEntryExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointEntryExt.swift; sourceTree = "<group>"; };
 		FA83A74E264BF9D7007D8EEF /* CurveAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveAlgorithm.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				FAC49EE22652CA1A00A8F5C0 /* LocationViewController.swift */,
 				FAED4DAA2652E079003A33B6 /* LocationResultsTableController.swift */,
 				FA079C552674C32200D952E4 /* SettingsViewController.swift */,
+				FA079C632676681200D952E4 /* TextViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				FAABFBA126411E6700AD3D0C /* Assets.xcassets */,
 				FAABFBA326411E6700AD3D0C /* LaunchScreen.storyboard */,
 				FAABFBA626411E6700AD3D0C /* Info.plist */,
+				FA079C60267666CD00D952E4 /* privacyandterms.rtf */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA079C61267666CD00D952E4 /* privacyandterms.rtf in Resources */,
 				FAABFBA526411E6700AD3D0C /* LaunchScreen.storyboard in Resources */,
 				FAABFBA226411E6700AD3D0C /* Assets.xcassets in Resources */,
 			);
@@ -360,6 +367,7 @@
 				FAABFBC02641522300AD3D0C /* WeatherModel.swift in Sources */,
 				FAABFBE92641779600AD3D0C /* Location.swift in Sources */,
 				FA83A752264C0974007D8EEF /* UIImageExt.swift in Sources */,
+				FA079C642676681200D952E4 /* TextViewController.swift in Sources */,
 				FA83A762264D3CA1007D8EEF /* IntExt.swift in Sources */,
 				FAABFBFE264320BD00AD3D0C /* WeatherHeaderCell.swift in Sources */,
 				FA079C5D2674C38600D952E4 /* SettingsCell.swift in Sources */,
