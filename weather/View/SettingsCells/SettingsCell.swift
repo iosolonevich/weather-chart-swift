@@ -24,6 +24,7 @@ class SettingsCell: UITableViewCell {
             guard let sectionType = sectionType else { return }
             textLabel?.text = sectionType.description
             switchControl.isHidden = !sectionType.containsSwitch
+            accessoryType = sectionType.containsDisclosureIndicator ? .disclosureIndicator : .none
         }
     }
     

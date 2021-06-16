@@ -13,7 +13,7 @@ class TextViewController: UIViewController {
     
     let textView: UITextView = {
         let textView = UITextView()
-        
+        textView.contentInsetAdjustmentBehavior = .never
         return textView
     }()
     
@@ -26,15 +26,15 @@ class TextViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        textView.setContentOffset(CGPoint.zero, animated: true)
-    }
-
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.largeTitleDisplayMode = .never
+        
         // load RTF-file
         let url = Bundle.main.url(forResource: fileName, withExtension: "rtf")!
         let options = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf]
@@ -47,9 +47,8 @@ class TextViewController: UIViewController {
         
         textView.attributedText = rtfString
         
-        view.addSubview(textView, anchors: [ .leading(view.leadingAnchor), .top(view.topAnchor), .trailing(view.trailingAnchor), .bottom(view.bottomAnchor) ])
-    }
-    
-
+        view.addSubview(textView, anchors: [ .leading(view.leadingAnchor), .trailing(view.trailingAnchor), .bottom(view.bottomAnchor), .top(view.topAnchor, 55) ])
+        
+        }
 
 }

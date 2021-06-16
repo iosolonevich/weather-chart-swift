@@ -58,7 +58,7 @@ class SettingsViewController: UIViewController {
 //        navigationController?.navigationBar.barStyle = .black
 //        navigationController?.navigationBar.barTintColor = UIColor(red: 55/255, green: 120/255, blue: 250/255, alpha: 1)
         navigationItem.title = "Settings"
-//        navigationItem.largeTitleDisplayMode = .never
+        navigationItem.largeTitleDisplayMode = .always
     }
 }
 
@@ -120,11 +120,14 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let privacyVC = privacyVC else { return }
 //                let navController = UINavigationController(rootViewController: privacyVC)
 //                self.present(navController, animated: true, completion: nil)
+                
                 self.navigationController?.pushViewController(privacyVC, animated: true)
             }
         default:
             break
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
 }

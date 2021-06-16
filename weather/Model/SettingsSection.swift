@@ -7,6 +7,7 @@
 
 protocol SectionType: CustomStringConvertible {
     var containsSwitch: Bool { get }
+    var containsDisclosureIndicator: Bool { get }
 }
 
 enum SettingsSection: Int, CaseIterable, CustomStringConvertible {
@@ -34,6 +35,13 @@ enum AppearanceOptions: Int, CaseIterable, SectionType {
         }
     }
     
+    var containsDisclosureIndicator: Bool {
+        switch self {
+        case .units: return false
+        case .theme: return false
+        }
+    }
+    
     var description: String {
         switch self {
         case .units: return "Units"
@@ -53,6 +61,15 @@ enum OtherOptions: Int, CaseIterable, SectionType {
     case about
     
     var containsSwitch: Bool { return false }
+    
+    var containsDisclosureIndicator: Bool {
+        switch self {
+        case .emailSupport: return false
+        case .rateThisApp: return false
+        case .privacy: return true
+        case .about: return false
+        }
+    }
     
     var description: String {
         switch self {
