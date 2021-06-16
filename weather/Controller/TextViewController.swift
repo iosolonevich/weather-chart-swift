@@ -29,11 +29,18 @@ class TextViewController: UIViewController {
 //    override func viewDidLayoutSubviews() {
 //        super.viewDidLayoutSubviews()
 //    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+//        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
         
         // load RTF-file
         let url = Bundle.main.url(forResource: fileName, withExtension: "rtf")!
